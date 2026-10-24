@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
-
 body {
   background-image: url("./assets/img/y1EBgs.png");
   background-repeat: no-repeat;
@@ -7,6 +5,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
 
 html {
   box-sizing: border-box;
@@ -47,7 +48,7 @@ body {
 
 .bola {
   display: block;
-  width: min(80vw, 320px);
+  width: clamp(100px, 20vw, 180px);
   height: auto;
   margin: 0 auto 1rem;
 }
