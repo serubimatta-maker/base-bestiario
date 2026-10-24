@@ -9,31 +9,11 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
 
-html {
-  box-sizing: border-box;
-  min-height: 100%;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
 
 body {
   font-family: system-ui, sans-serif;
   text-align: center;
-}
-
-::selection {
-  background-color: #30cac073;
-  color: #130808;
 }
 
 #contenedorGeneral {
@@ -46,11 +26,19 @@ body {
   font-weight: 400;
 }
 
+.bolas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.5rem, 3vw, 1.5rem);
+  width: 100%;
+}
+
 .bola {
   display: block;
-  width: clamp(100px, 20vw, 180px);
+  width: clamp(64px, 20vw, 180px);
   height: auto;
-  margin: 0 auto 1rem;
+  margin: 0;
 }
 
 #resultado {
