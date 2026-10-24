@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
 
+body {
+  background-image: url("./assets/img/y1EBgs.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 html {
   box-sizing: border-box;
   min-height: 100%;
