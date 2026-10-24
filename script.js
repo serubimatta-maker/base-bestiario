@@ -18,8 +18,10 @@ boton.addEventListener("click", () => {
 
   bola.src = `./assets/img/bola_${numero}.png`;
   bola.alt = `Bola de bingo número ${numero}`;
-  resultado.textContent = `${nuevaRonda ? "Nueva ronda. " : ""}Salió el número ${numero}.`;
+  
 
   audio.play();
+
+  let 
 });
   
