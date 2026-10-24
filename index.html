@@ -8,44 +8,26 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/sitio.webmanifest" />
 
-    <title>..:: Collage ::..</title>
-    <!-- <meta name="description" content="Descripción del sitio...." /> -->
+    <title>..:: Bingo ::..</title>
+
 
     <!-- OpenGraph -->
     <meta property="og:locale" content="es_CO" />
     <meta property="og:type" content="website" />
     <!-- Esto importa la hoja de estilos de la página -->
     <link rel="stylesheet" href="estilo.css" />​
+      <h1 id="tituloPagina">Bingo</h1>
 
     <!-- Esto importa el archivo de JavaScript de la página -->
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div id="contenedorGeneral">
-      <h1 id="tituloPagina">
-        <a href="https://en.wikipedia.org/wiki/Bestiario" target="_blank"
-          >Bestiario / Collage</a
-        >
-      </h1>
-      <div id="contenedorPersonaje">
-        <img
-          class="imagen"
-          id="cabeza"
-          src=""
-        />
-        <img
-          class="imagen"
-          id="tronco"
-          src=""
-        />
-        <img
-          class="imagen"
-          id="patas"
-          src=""
-        />
-      </div>
 
-      <button id="boton">Mezclar</button>
+    <div id="contenedorGeneral">
+      <img id="logo" src="./assets/img/bingo_ball_color_winner_md_nwm_v2.gif" alt="Logo de bingo" />
+      <img id="bola" src="./assets/img/bola_1.png" alt="Bola de bingo" />
+      <p id="resultado" aria-live="polite">Presiona el botón para sacar una bola.</p>
+      <button id="btn" class="button" type="button">Sacar bola</button>
     </div>
   </body>
 </html>

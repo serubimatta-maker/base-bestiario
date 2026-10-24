@@ -1,53 +1,25 @@
-// Listas de imágenes
-const listaCabezas = [
-  "../base-bestiario/assets/img/cabeza1.jpg",
-  "../base-bestiario/assets/img/cabeza2.jpg",
-  "../base-bestiario/assets/img/cabeza3.png",
-];
-const listaTroncos = [
- "../base-bestiario/assets/img/tronco1.jpg",
-  "../base-bestiario/assets/img/tronco2.jpg",
-  "../base-bestiario/assets/img/tronco3.jpg",
-];
-const listaPatas = [
-  "../base-bestiario/assets/img/patas1.jpg",
-  "../base-bestiario/assets/img/patas2.jpg",
-  "../base-bestiario/assets/img/patas3.png",
-];
+const bola = document.getElementById("bola");
+const boton = document.getElementById("btn");
+const resultado = document.getElementById("resultado");
+const audio = new Audio("./assets/img/girarbingo.mp3");
+const numeros = [1, 2, 3, 4, 5];
 
-// Obtenemos los contenedores de las imágenes del HTML usando los IDs
-const cabeza = document.getElementById("cabeza");
-const tronco = document.getElementById("tronco");
-const patas = document.getElementById("patas");
-const boton = document.getElementById("boton");
+let bolasDisponibles = [...numeros];
 
-// Inicializamos las variables de los números aleatorios
-let cabezaAleatorio = 0;
-let troncoAleatorio = 0;
-let patasAleatorio = 0;
+boton.addEventListener("click", () => {
+  const nuevaRonda = bolasDisponibles.length === 0;
 
-// Función para generar un número aleatorio entre dos valores
-function numeroAleatorio(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
-}
+  if (nuevaRonda) {
+    bolasDisponibles = [...numeros];
+  }
 
-// Función para crear una nueva bestia con tres imágenes elegidas aleatoriamente
-function generarBestia() {
-  cabezaAleatorio = numeroAleatorio(0, listaCabezas.length);
-  troncoAleatorio = numeroAleatorio(0, listaTroncos.length);
-  patasAleatorio = numeroAleatorio(0, listaPatas.length);
+  const indice = Math.floor(Math.random() * bolasDisponibles.length);
+  const [numero] = bolasDisponibles.splice(indice, 1);
 
-  // Asignamos la nueva fuente (source) a cada imagen
-  cabeza.src = `${listaCabezas[cabezaAleatorio]}`; //ruta + listaCabezas[cabezaAleatorio];
-  tronco.src = `${listaTroncos[troncoAleatorio]}`;
-  patas.src = `${listaPatas[patasAleatorio]}`;
+  bola.src = `./assets/img/bola_${numero}.png`;
+  bola.alt = `Bola de bingo número ${numero}`;
+  resultado.textContent = `${nuevaRonda ? "Nueva ronda. " : ""}Salió el número ${numero}.`;
 
-  console.log(cabezaAleatorio, troncoAleatorio, patasAleatorio);
-}
-
-// Generamos un nuevo collage cada vez que hacemos click en el botón "mezclar"
-boton.addEventListener("click", function () {
-  generarBestia();
+  audio.play();
 });
-
-generarBestia();
+  
