@@ -1,13 +1,37 @@
-body {
-  background-image: url("./assets/img/y1EBgs.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
 }
 
+body{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
+.background {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.content{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100% ;
+  background-color: #000000f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -20,11 +44,6 @@ body {
   margin: 2rem 1rem;
 }
 
-#tituloPagina {
-  margin: 0 0 1rem;
-  font-family: "Barriecito", system-ui;
-  font-weight: 400;
-}
 
 .bolas {
   display: flex;
@@ -53,9 +72,9 @@ body {
 }
 .button  {
   
-  background-color: #ee07cf;
+  background-color: #ee0707;
   box-shadow: 0px 0px 6px 2px #e6e5e5 inset;
-  color: #fff;
+  color: #000000f9;
   height: 80px;
   width: 80px;
   margin-bottom: 15px;
